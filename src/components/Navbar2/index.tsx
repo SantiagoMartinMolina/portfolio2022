@@ -26,64 +26,30 @@ const Navbar2 = () => {
           stagger: 0.05, // 0.1 seconds between when each "a" element starts animating
         },
         "<"
-      );
+      )
+      .to(".menu-btn", { backgroundColor: "#000", color: "#fafafa" }, "<");
   };
-  const handleMouseLeave = () => {};
+  const handleMouseLeave = () => {
+    gsap.to(".nav-bg", {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.3,
+      ease: "Back.easeOut.config(1.7)",
+    });
 
-  // const handleHover = (type: string) => {
-  //   console.log(type);
+    gsap.to(".menu a", {
+      y: "100%",
+      opacity: 0,
+      duration: 0.1,
+      stagger: 0.05,
+    });
 
-  //   // ver cuando entro y saco el puntero rapidamente, no esta funcionando correctamente
+    gsap.to(".menu-btn", {
+      backgroundColor: "#fafafa",
+      color: "#000",
+    });
+  };
 
-  //   if (type === "enter") {
-  //     if (isActive) return;
-  //     setIsActive(true);
-
-  //     gsap.timeline();
-
-  // gsap.to(".nav-bg", {
-  //   scale: 1,
-  //   opacity: 1,
-  //   duration: 0.5,
-  //   ease: "Back.easeOut.config(1.7)",
-  // });
-
-  //   gsap.to(".menu", {
-  //     scale: 1,
-  //     duration: 0.5,
-  //     ease: "Back.easeOut.config(1.7)",
-  //   });
-  // }
-
-  //   if (type === "leave") {
-  //     setIsActive(false);
-  //     gsap.to(".menu", {
-  //       scale: 0,
-  //       duration: 0,
-  //     });
-
-  //     gsap.set(".nav-bg", {
-  //       scale: 0.9,
-  //       opacity: 0,
-  //     });
-  //   }
-
-  // const scrollEl = document.getElementById("main-container")!;
-  // console.log("entro", scrollEl);
-  // gsap.to(".logo", {
-  //   x: 300,
-  //   y: 200,
-  //   duration: 2,
-  //   scrollTrigger: {
-  //     scroller: scrollEl,
-  //     trigger: document.getElementById("prueba")!,
-  //     start: "top bottom",
-  //     // end: "top top",
-  //     scrub: true,
-  //     markers: true,
-  //   },
-  // });
-  // };
   return (
     <StyledNavbar2>
       <div>

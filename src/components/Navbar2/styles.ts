@@ -25,12 +25,13 @@ export const StyledNavbar2 = styled.header`
       background-color: inherit;
       border: 1px solid #000;
       border-radius: 10px;
-      padding: 0.5em 1em;
-      background-color: gold;
-      width: 100%;
+      padding: 0.25em 0.5em;
+      background-color: #fafafa;
+      /* width: 100%; */
       text-align: center;
       margin-bottom: 1em;
       z-index: 10;
+      color: #000;
     }
 
     ul {
