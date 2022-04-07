@@ -1,9 +1,9 @@
-// import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 // import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
 import useScrollSettings from "./hooks/useScrollSettings";
-// import gsap from "gsap";
+import gsap from "gsap";
 
 function App() {
   const scroller = useScrollSettings(true);
