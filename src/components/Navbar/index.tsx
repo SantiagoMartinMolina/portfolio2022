@@ -19,12 +19,14 @@ const Navbar = () => {
 
   const handleClick = () => {
     if (isActive) {
-      handleMouseLeave();
+      hideMenu();
       return;
     }
-    handleMouseEnter();
+
+    showMenu();
   };
-  const handleMouseEnter = () => {
+
+  const showMenu = () => {
     setIsActive(true);
     gsap
       .timeline()
@@ -46,7 +48,8 @@ const Navbar = () => {
       )
       .to(".menu-btn", { backgroundColor: "#000", color: "#fafafa" }, "<");
   };
-  const handleMouseLeave = () => {
+
+  const hideMenu = () => {
     setIsActive(false);
 
     gsap.to(".nav-bg", {
@@ -67,6 +70,13 @@ const Navbar = () => {
       backgroundColor: "#fafafa",
       color: "#000",
     });
+  };
+  const handleMouseEnter = () => {
+    if (window.innerWidth < 1024) return;
+    showMenu();
+  };
+  const handleMouseLeave = () => {
+    hideMenu();
   };
 
   return (
