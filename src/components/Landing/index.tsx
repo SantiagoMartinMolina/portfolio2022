@@ -40,13 +40,31 @@ const Landing = () => {
       <div className="landing-bottom">
         <ul>
           <li>
-            <a href="#">Linkedin</a>
+            <a
+              href="https://www.linkedin.com/in/santiago-molina-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin
+            </a>
           </li>
           <li>
-            <a href="#">Github</a>
+            <a
+              href="https://github.com/SantiagoMartinMolina"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
           </li>
           <li>
-            <a href="#">Twitter</a>
+            <a
+              href="https://twitter.com/santidev7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
           </li>
         </ul>
       </div>
