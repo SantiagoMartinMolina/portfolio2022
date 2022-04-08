@@ -12,15 +12,7 @@ function App() {
       <Navbar />
       <div id="main-container" className="main-container" data-scroll-container>
         <Landing />
-
         <About />
-        <div style={{ height: "100vh" }}>hola</div>
-        <div style={{ height: "100vh" }}>hola</div>
-        <div id="prueba" style={{ height: "100vh" }}>
-          hola
-        </div>
-        <div style={{ height: "100vh" }}>hola</div>
-        <div style={{ height: "100vh" }}>hola</div>
       </div>
     </>
   );

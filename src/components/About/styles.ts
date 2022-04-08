@@ -16,6 +16,7 @@ export const StyledAbout = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     .title {
       font-size: 7vw;
@@ -36,6 +37,7 @@ export const StyledAbout = styled.section`
     .text-container {
       opacity: 0;
       font-size: 1.4em;
+      text-transform: none;
       .wrapper {
         opacity: 0;
         transform: translate(0);
@@ -45,6 +47,21 @@ export const StyledAbout = styled.section`
           opacity: 1;
         }
         opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .about-container {
+      .title {
+        span {
+          transform: translateY(0);
+        }
+      }
+
+      .text-container {
+        font-size: 1em;
+        width: 100%;
       }
     }
   }

@@ -15,6 +15,7 @@ const About = () => {
   }, [onScreen]);
 
   useEffect(() => {
+    if (window.innerWidth < 1024) return;
     if (reveal) {
       gsap.to(".wrapper", {
         y: -50,

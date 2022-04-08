@@ -6,15 +6,17 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    gsap.from(".menu-btn", {
-      y: 100,
-      duration: 0.5,
-    });
+    if (window.innerWidth > 1024) {
+      gsap.from(".menu-btn", {
+        y: 100,
+        duration: 0.5,
+      });
 
-    gsap.from(".logo span", {
-      y: 100,
-      duration: 0.5,
-    });
+      gsap.from(".logo span", {
+        y: 100,
+        duration: 0.5,
+      });
+    }
   }, []);
 
   const handleClick = () => {

@@ -91,6 +91,7 @@ export const StyledNavbar2 = styled.header`
         height: 100%;
         background: #fafafa;
         border-radius: 20px;
+        border: 1px solid #000;
       }
     }
   }
@@ -100,6 +101,7 @@ export const StyledNavbar2 = styled.header`
 
     .logo {
       margin-top: 16px;
+      margin-left: 16px;
     }
 
     nav {
