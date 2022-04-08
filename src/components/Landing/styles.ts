@@ -92,4 +92,14 @@ export const StyledLanding = styled.section`
       transform: translateY(100%);
     }
   }
+
+  @media (max-width: 800px) {
+    .landing-bottom ul {
+      display: flex;
+      justify-content: center;
+      a {
+        font-size: 1.2em;
+      }
+    }
+  }
 `;
