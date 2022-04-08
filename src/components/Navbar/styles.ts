@@ -104,6 +104,12 @@ export const StyledNavbar2 = styled.header`
 
     nav {
       padding: 1em;
+
+      .menu-btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 `;

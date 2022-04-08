@@ -46,7 +46,21 @@ const Navbar = () => {
         },
         "<"
       )
-      .to(".menu-btn", { backgroundColor: "#000", color: "#fafafa" }, "<");
+      .to(
+        ".menu-btn",
+        {
+          backgroundColor: "#000",
+          color: "#fafafa",
+        },
+        "<"
+      )
+      .to(
+        ".menu-btn-container",
+        {
+          justifyContent: "center",
+        },
+        "<"
+      );
   };
 
   const hideMenu = () => {
@@ -69,6 +83,10 @@ const Navbar = () => {
     gsap.to(".menu-btn", {
       backgroundColor: "#fafafa",
       color: "#000",
+    });
+
+    gsap.to(".menu-btn-container", {
+      justifyContent: "flex-end",
     });
   };
   const handleMouseEnter = () => {
