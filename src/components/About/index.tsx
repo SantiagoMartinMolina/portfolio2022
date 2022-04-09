@@ -27,7 +27,7 @@ const About = () => {
   }, [reveal]);
 
   return (
-    <StyledAbout>
+    <StyledAbout data-scroll-section>
       <div className="about-container" ref={ref}>
         <h2 className="title">
           <span data-scroll>Sobre mi</span>
