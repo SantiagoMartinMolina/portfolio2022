@@ -6,6 +6,24 @@ export const StyledContactForm = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: #f5f0ec;
+
+  .title {
+    font-size: 7vw;
+    margin-bottom: 1em;
+    overflow: hidden;
+    color: #000;
+
+    span {
+      display: inline-block;
+      transform: translateY(100%);
+      transition: transform 1s ease;
+
+      &.is-reveal {
+        transform: translateY(0);
+      }
+    }
+  }
 
   form {
     display: flex;

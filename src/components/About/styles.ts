@@ -38,6 +38,7 @@ export const StyledAbout = styled.section`
       opacity: 0;
       font-size: 1.4em;
       text-transform: none;
+      width: 80ch;
       .wrapper {
         opacity: 0;
         transform: translate(0);

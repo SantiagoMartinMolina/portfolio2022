@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
+import type { FC } from "react";
 import { StyledNavbar2 } from "./styles";
 import gsap from "gsap";
+import { Scroller } from "../../hooks/useScrollSettings";
 
-const Navbar = () => {
+interface Props {
+  scroller: Scroller;
+}
+
+const Navbar: FC<Props> = ({ scroller }) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -39,7 +45,7 @@ const Navbar = () => {
         ease: "Back.easeOut.config(1.7)",
       })
       .to(
-        ".menu a",
+        ".menu span",
         {
           y: "0%",
           opacity: 1,
@@ -75,7 +81,7 @@ const Navbar = () => {
       ease: "Back.easeOut.config(1.7)",
     });
 
-    gsap.to(".menu a", {
+    gsap.to(".menu span", {
       y: "100%",
       opacity: 0,
       duration: 0.1,
@@ -118,13 +124,20 @@ const Navbar = () => {
         </div>
         <ul className="menu">
           <li>
-            <a href="#">Proyectos</a>
+            <span onClick={() => scroller.scrollTo("#about", {})}>
+              Sobre mi
+            </span>
           </li>
           <li>
-            <a href="#">Habilidades</a>
+            <span onClick={() => scroller.scrollTo("#projects", {})}>
+              Proyectos
+            </span>
           </li>
+
           <li>
-            <a href="#">Contacto</a>
+            <span onClick={() => scroller.scrollTo("#contact", {})}>
+              Contacto
+            </span>
           </li>
         </ul>
         <div className="nav-bg">

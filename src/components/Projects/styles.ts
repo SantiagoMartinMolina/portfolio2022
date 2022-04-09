@@ -5,6 +5,23 @@ export const StyledProjects = styled.section`
   margin: 0 -5vw;
   position: relative;
 
+  .title {
+    font-size: 7vw;
+    margin-top: 1.5em;
+    overflow: hidden;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      transform: translateY(100%);
+      transition: transform 1s ease;
+
+      &.is-reveal {
+        transform: translateY(0);
+      }
+    }
+  }
+
   .projects-container {
     height: 80vh;
     padding: 3em;
@@ -17,10 +34,7 @@ export const StyledProjects = styled.section`
 export const StyledProjectItem = styled.div`
   aspect-ratio: 16/9;
   height: 100%;
-  /* display: grid; */
-  /* grid-template-columns: 20vw 1fr 200px; */
   width: 100vw;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;

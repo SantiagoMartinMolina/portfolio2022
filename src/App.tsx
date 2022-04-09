@@ -7,11 +7,11 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 
 function App() {
-  useScrollSettings(true);
+  const scroller = useScrollSettings(true)!;
 
   return (
     <>
-      <Navbar />
+      <Navbar scroller={scroller} />
       <div id="main-container" className="main-container" data-scroll-container>
         <Landing />
         <About />

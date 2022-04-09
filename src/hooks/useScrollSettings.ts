@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Scroller {
+export interface Scroller {
   on: (s: string, t: any) => void;
   scrollTo: (target: string, options: {}) => void;
 }

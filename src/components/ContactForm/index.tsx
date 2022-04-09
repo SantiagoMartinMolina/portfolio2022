@@ -25,7 +25,10 @@ const ContactForm = () => {
   };
 
   return (
-    <StyledContactForm data-scroll-section>
+    <StyledContactForm data-scroll-section id="contact">
+      <h2 className="title">
+        <span data-scroll>Contacto</span>
+      </h2>
       <form onSubmit={sendEmail}>
         <div>
           <input type="text" placeholder="Nombre" name="from_name" required />

@@ -62,18 +62,17 @@ export const StyledNavbar2 = styled.header`
         &:hover {
           transform: scale(1.1);
         }
-      }
-
-      a {
-        text-decoration: none;
-        color: #000;
-        font-size: 1em;
-        display: flex;
-        overflow: hidden;
-        transition: 0.3s;
-        position: relative;
-        transform: translateY(100%);
-        opacity: 0;
+        span {
+          color: #000;
+          font-size: 1em;
+          display: block;
+          overflow: hidden;
+          transition: 0.3s;
+          position: relative;
+          transform: translateY(100%);
+          opacity: 0;
+          cursor: pointer;
+        }
       }
     }
 

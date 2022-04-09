@@ -82,7 +82,10 @@ const Projects = () => {
   ));
 
   return (
-    <StyledProjects data-scroll-section>
+    <StyledProjects data-scroll-section id="projects">
+      <h2 className="title">
+        <span data-scroll>Proyectos</span>
+      </h2>
       <div className="projects-container" ref={ref}>
         {projects}
       </div>
