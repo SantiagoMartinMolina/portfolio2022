@@ -21,7 +21,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <StyledLanding>
+    <StyledLanding data-scroll-section>
       <div className="landing-centered">
         <h2>
           <span>Santiago</span> <span>Molina</span>
