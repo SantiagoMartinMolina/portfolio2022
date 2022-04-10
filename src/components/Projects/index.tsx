@@ -30,10 +30,28 @@ const ProjectItem: FC<Props> = ({
       ref={ref}
       className={`project-item-wrapper ${onScreen ? "is-reveal" : ""}`}
     >
-      <div></div>
       <div className="project-item">
         <div className="project-item-info">
           <h1 className="project-info-title">{title}</h1>
+          <p className="project-info-description">{description}</p>
+          <div className="project-info-links">
+            <a
+              className="btn"
+              href={repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver repositorio
+            </a>
+            <a
+              className="btn"
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver demo
+            </a>
+          </div>
         </div>
         {video ? (
           <div className="banner">
@@ -48,7 +66,6 @@ const ProjectItem: FC<Props> = ({
           ></div>
         )}
       </div>
-      <div></div>
     </StyledProjectItem>
   );
 };

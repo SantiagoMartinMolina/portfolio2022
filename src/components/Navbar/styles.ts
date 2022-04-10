@@ -38,8 +38,8 @@ export const StyledNavbar2 = styled.header`
     .menu-btn {
       background-color: inherit;
       border: 1px solid #000;
-      border-radius: 10px;
-      padding: 0.25em 0.5em;
+      border-radius: 20px;
+      padding: 0.5em 1em;
       background-color: #fafafa;
       text-align: center;
       margin-bottom: 1em;
