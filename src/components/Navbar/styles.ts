@@ -28,7 +28,8 @@ export const StyledNavbar2 = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: absolute;
+    right: 16px;
 
     .menu-btn-container {
       overflow: hidden;

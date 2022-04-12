@@ -3,18 +3,19 @@ import type { FC } from "react";
 import { StyledNavbar2 } from "./styles";
 import gsap from "gsap";
 import { Scroller } from "../../hooks/useScrollSettings";
+import Marquee2 from "../Marquee2";
 
 interface Props {
   scroller: Scroller;
-  language: string;
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-  setLanguage: (lang: string) => void;
+  // language: string;
+  // getTexts: (key: string) => {
+  //   [key: string]: string;
+  // };
+  // setLanguage: (lang: string) => void;
 }
 
-const Navbar: FC<Props> = ({ scroller, language, getTexts, setLanguage }) => {
-  const texts = getTexts("about");
+const Navbar: FC<Props> = ({ scroller }) => {
+  // const texts = getTexts("about");
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -137,6 +138,7 @@ const Navbar: FC<Props> = ({ scroller, language, getTexts, setLanguage }) => {
           <span>SM</span>
         </h2>
       </div>
+      {/* <Marquee2 /> */}
       <nav onMouseLeave={handleMouseLeave}>
         <div className="menu-btn-container">
           <button
@@ -166,9 +168,10 @@ const Navbar: FC<Props> = ({ scroller, language, getTexts, setLanguage }) => {
           </li>
           <li>
             <button
-              onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
+            // onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
             >
-              {language}
+              {/* {language} */}
+              ES
             </button>
           </li>
         </ul>
