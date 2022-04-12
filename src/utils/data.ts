@@ -8,7 +8,7 @@ const projectsData = [
   {
     title: "Movye",
     description:
-      'Aplicación web para buscar películas, ordenar y filtrar. También permite agregar películas a "Favorites" y "Watchlist". La información es traída de The Movie DB. El proyecto fue realizado junto con Emiliano Alfonso y las tecnologías utilizadas fueron Next.js y styled components.',
+      'Aplicación web para buscar películas, ordenar y filtrar. También permite agregar películas a "Favorites" y "Watchlist". La información es traída de The Movie DB. Las tecnologías utilizadas fueron Next.js y styled components.',
     repoLink: "https://github.com/SantiagoMartinMolina/Movye",
     demoLink: "https://movye.vercel.app/",
     image: movye,
@@ -26,7 +26,7 @@ const projectsData = [
   {
     title: "Memotest",
     description:
-      'Aplicación web para buscar películas, ordenar y filtrar. También permite agregar películas a "Favorites" y "Watchlist". La información es traída de The Movie DB. El proyecto fue realizado junto con Emiliano Alfonso y las tecnologías utilizadas fueron Next.js y styled components.',
+      "Clásico juego Memotest, con la posibilidad de elegir 2 temáticas.",
     repoLink: "https://github.com/SantiagoMartinMolina/memotest",
     demoLink: "https://memotestv2.vercel.app/",
     image: memotest,
