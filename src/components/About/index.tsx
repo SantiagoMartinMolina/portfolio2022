@@ -38,7 +38,7 @@ const About = () => {
               <div className="wrapper">{children}</div>
             )}
           >
-            Naci en Tucuman, Argentina. Cuando empecé mi etapa universitaria me
+            Soy de Tucuman, Argentina. Cuando empecé mi etapa universitaria me
             inscribí ingenieria en sistemas para poder entender y aprender mas
             del mundo IT, asi hasta llegar al tercer año. Muy convencido de que
             mi enfoque era más hacia la programación, decidí darle el rumbo a mi

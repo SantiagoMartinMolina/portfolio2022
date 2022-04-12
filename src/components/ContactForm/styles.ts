@@ -6,7 +6,7 @@ export const StyledContactForm = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f0ec;
+  background-color: var(--bg-color-light);
 
   .title {
     font-size: 7vw;
@@ -57,16 +57,17 @@ export const StyledContactForm = styled.section`
       background-color: transparent;
       border: none;
       border-bottom: 3px solid #484d54;
-      color: #aebcce;
+      color: #000;
       outline: none;
       transition: all 500ms ease;
       border-radius: 10px;
       font-family: inherit;
 
-      &:focus {
-        border-bottom: 3px solid #aebcce;
+      &:focus,
+      &:hover {
+        border-bottom: 3px solid var(--details-color);
         &::placeholder {
-          color: #aebcce;
+          color: var(--details-color);
         }
       }
     }
@@ -85,8 +86,8 @@ export const StyledContactForm = styled.section`
       &:hover,
       &:focus {
         transform: scale(1.1);
-        border: 3px solid #aebcce;
-        color: #aebcce;
+        border: 3px solid var(--details-color);
+        color: var(--details-color);
       }
 
       &:active {

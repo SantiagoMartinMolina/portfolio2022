@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledAbout = styled.section`
-  background-color: #f5f0ec;
+  background-color: var(--bg-color-light);
   min-height: 100vh;
   padding: 2em;
   display: flex;

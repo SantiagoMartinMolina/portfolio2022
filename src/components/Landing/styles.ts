@@ -49,13 +49,18 @@ export const StyledLanding = styled.section`
       a {
         text-decoration: none;
         color: #fafafa;
-        font-size: 2vw;
+        font-size: 1.5vw;
         font-weight: 300;
         position: relative;
         display: flex;
         overflow: hidden;
+        border-radius: 20px;
+        padding: 0.3em 0.6em;
+        &:hover {
+          background-color: var(--details-color);
+        }
 
-        &::before {
+        /* &::before {
           content: "";
           position: absolute;
           top: 0;
@@ -83,7 +88,7 @@ export const StyledLanding = styled.section`
 
         &:hover::after {
           left: 0;
-        }
+        } */
       }
     }
   }
@@ -99,6 +104,12 @@ export const StyledLanding = styled.section`
       justify-content: center;
       a {
         font-size: 1.2em;
+        padding: 0;
+        border-radius: 0px;
+
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }

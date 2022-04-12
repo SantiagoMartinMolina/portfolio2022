@@ -35,7 +35,7 @@ export const StyledProjects = styled.section`
 `;
 
 export const StyledProjectItem = styled.div`
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
   height: 100%;
   width: 100vw;
   display: flex;
@@ -47,7 +47,21 @@ export const StyledProjectItem = styled.div`
     .project-item-image,
     .banner {
       transform: scale(1);
+      opacity: 0.4;
       filter: none;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .project-item {
+      .project-item-info {
+        transform: scale(1);
+        transform: translateX(150px);
+        filter: none;
+        opacity: 1;
+      }
     }
   }
 
@@ -69,21 +83,29 @@ export const StyledProjectItem = styled.div`
       bottom: 10%; */
       z-index: 1;
       /* transform: translateX(-20%); */
-      color: #dbd8d6;
-      /* background-color: blue; */
+      color: inherit;
+      /* background-color: red; */
       flex: 1;
+      will-change: transform;
+      transform: scale(0.7);
+      transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+      filter: grayscale(100%) sepia(20%) brightness(80%);
+      opacity: 0.4;
+      transform-origin: left;
+      /* mix-blend-mode: difference; */
 
       .project-info-title {
         line-height: 6vw;
         font-family: "Bai Janjuree", sans-serif;
         font-weight: 600;
         font-size: 6vw;
+        /* mix-blend-mode: difference; */
       }
 
       .project-info-description {
         line-height: 24px;
         font-family: "Bai Jamjuree";
-        font-weight: 400;
+        font-weight: 600;
         font-size: 24px;
         margin-top: 1em;
         text-transform: none;
@@ -100,19 +122,22 @@ export const StyledProjectItem = styled.div`
           color: #fafafa;
           display: inline-block;
           margin: 0.8em;
-          padding: 0.75em 1.5em;
+          padding: 0.8em 1.6em;
           border-radius: 20px;
           border: 0;
-          background-color: #8a0000;
+          background-color: var(--details-color);
           font-size: 0.8em;
           font-family: inherit;
           cursor: pointer;
           font-weight: bold;
-          transition: background-color 200ms ease, color 200ms ease;
-          border: 2px solid var(--color);
+          transition: background-color 200ms ease, color 200ms ease,
+            transform 200ms ease;
           &:hover {
-            background-color: #222;
-            color: #f6cb86;
+            background-color: #555;
+            transform: scale(1.1);
+          }
+          &:active {
+            transform: scale(0.95);
           }
         }
       }
@@ -122,16 +147,26 @@ export const StyledProjectItem = styled.div`
     .banner {
       flex: 2;
 
-      background-position: center;
+      background-position: left;
       background-size: cover;
-      transform-origin: center;
-      width: 800px;
-      height: 400px;
+      transform-origin: right;
+      /* max-width: 800px; */
+
+      height: 80%;
       will-change: transform;
       transform: scale(0.7);
-      transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
       filter: grayscale(100%) sepia(20%) brightness(80%);
       border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .banner {
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
   }
 `;
