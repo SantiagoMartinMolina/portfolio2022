@@ -74,24 +74,26 @@ const Projects = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      const sections = gsap.utils.toArray(".project-item-wrapper");
-      console.log(sections);
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          start: "top top",
-          trigger: ref.current,
-          scroller: "#main-container",
-          pin: true,
-          scrub: 0.5,
-          snap: 1 / (sections.length - 1),
-          end: () => `+=${ref.current!.offsetWidth}`,
-        },
+    if (window.innerWidth > 1024) {
+      setTimeout(() => {
+        const sections = gsap.utils.toArray(".project-item-wrapper");
+        console.log(sections);
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            start: "top top",
+            trigger: ref.current,
+            scroller: "#main-container",
+            pin: true,
+            scrub: 0.5,
+            snap: 1 / (sections.length - 1),
+            end: () => `+=${ref.current!.offsetWidth}`,
+          },
+        });
+        ScrollTrigger.refresh();
       });
-      ScrollTrigger.refresh();
-    });
+    }
   }, []);
 
   const projects = projectsData.map((project) => (
