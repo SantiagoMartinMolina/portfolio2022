@@ -38,11 +38,12 @@ export const StyledNavbar2 = styled.header`
     .menu-btn {
       background-color: inherit;
       border: 1px solid #000;
+      font-weight: 600;
       border-radius: 20px;
       padding: 0.5em 1em;
       background-color: #fafafa;
       text-align: center;
-      margin-bottom: 1em;
+      margin-bottom: 2em;
       z-index: 10;
       color: #000;
       cursor: pointer;
@@ -58,6 +59,7 @@ export const StyledNavbar2 = styled.header`
       li {
         overflow: hidden;
         transition: 0.3s;
+        display: flex;
 
         &:hover {
           transform: scale(1.1);
@@ -65,6 +67,7 @@ export const StyledNavbar2 = styled.header`
         span {
           color: #000;
           font-size: 1em;
+          font-weight: 600;
           display: block;
           overflow: hidden;
           transition: 0.3s;
@@ -72,6 +75,23 @@ export const StyledNavbar2 = styled.header`
           transform: translateY(100%);
           opacity: 0;
           cursor: pointer;
+        }
+
+        button {
+          color: inherit;
+          font-size: 1em;
+          /* display: block; */
+          overflow: hidden;
+          transition: 0.3s;
+          position: relative;
+          transform: translateY(100%);
+          opacity: 0;
+          cursor: pointer;
+          margin: 2em auto 0;
+          border-radius: 50%;
+          padding: 0.5em;
+          background-color: var(--details-color);
+          border: none;
         }
       }
     }

@@ -6,9 +6,15 @@ import { Scroller } from "../../hooks/useScrollSettings";
 
 interface Props {
   scroller: Scroller;
+  language: string;
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
+  setLanguage: (lang: string) => void;
 }
 
-const Navbar: FC<Props> = ({ scroller }) => {
+const Navbar: FC<Props> = ({ scroller, language, getTexts, setLanguage }) => {
+  const texts = getTexts("about");
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -36,6 +42,7 @@ const Navbar: FC<Props> = ({ scroller }) => {
 
   const showMenu = () => {
     setIsActive(true);
+    const detailsColor = "#8a0000";
     gsap
       .timeline()
       .to(".nav-bg", {
@@ -55,10 +62,21 @@ const Navbar: FC<Props> = ({ scroller }) => {
         "<"
       )
       .to(
+        ".menu button",
+        {
+          y: "0%",
+          opacity: 1,
+          duration: 0.02,
+          stagger: 0.05, // 0.1 seconds between when each "a" element starts animating
+        },
+        "<"
+      )
+      .to(
         ".menu-btn",
         {
-          backgroundColor: "#000",
+          backgroundColor: detailsColor,
           color: "#fafafa",
+          border: `1px solid ${detailsColor}`,
         },
         "<"
       )
@@ -88,9 +106,16 @@ const Navbar: FC<Props> = ({ scroller }) => {
       stagger: 0.05,
     });
 
+    gsap.to(".menu button", {
+      y: "100%",
+      opacity: 0,
+      duration: 0.1,
+    });
+
     gsap.to(".menu-btn", {
       backgroundColor: "#fafafa",
       color: "#000",
+      border: "1px solid #000",
     });
 
     gsap.to(".menu-btn-container", {
@@ -138,6 +163,13 @@ const Navbar: FC<Props> = ({ scroller }) => {
             <span onClick={() => scroller.scrollTo("#contact", {})}>
               Contacto
             </span>
+          </li>
+          <li>
+            <button
+              onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
+            >
+              {language}
+            </button>
           </li>
         </ul>
         <div className="nav-bg">
