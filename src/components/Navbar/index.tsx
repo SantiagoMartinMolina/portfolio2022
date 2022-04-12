@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { StyledNavbar2 } from "./styles";
 import gsap from "gsap";
 import { Scroller } from "../../hooks/useScrollSettings";
-import Marquee2 from "../Marquee2";
+// import Marquee2 from "../Marquee2";
 
 interface Props {
   scroller: Scroller;
