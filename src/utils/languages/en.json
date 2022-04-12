@@ -1,0 +1,9 @@
+{
+    "about": {
+        "title": "About me",
+        "description": "This is a description"
+    },
+    "projects": {
+        "title": "Projects"
+    }
+}

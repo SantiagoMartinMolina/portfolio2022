@@ -1,0 +1,9 @@
+{
+    "about": {
+        "title": "Sobre mi",
+        "description": "Esta es la descripcion"
+    },
+    "projects": {
+        "title": "Proyectos"
+    }
+}
