@@ -7,6 +7,7 @@ export const StyledContactForm = styled.section`
   align-items: center;
   min-height: 100vh;
   background-color: var(--bg-color-light);
+  position: relative;
 
   .title {
     font-size: 7vw;
@@ -96,10 +97,48 @@ export const StyledContactForm = styled.section`
     }
   }
 
+  .container {
+    width: 90%;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
+
+    a {
+      color: #000;
+      &:hover {
+        color: #fafafa;
+      }
+    }
+    p {
+      color: #000;
+    }
+  }
+
   @media (max-width: 1024px) {
+    .title {
+      span {
+        transform: translateY(0);
+      }
+    }
+
     form {
       div {
         flex-direction: column;
+      }
+    }
+
+    .container {
+      flex-direction: column;
+      a {
+        &:hover {
+          color: #000;
+        }
+      }
+      p {
+        margin-top: 1em;
       }
     }
   }
