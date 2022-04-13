@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import { LangContext } from "./context/LanguageContext";
 import Marquee1 from "./components/Marquee1";
-import Marquee2 from "./components/Marquee2";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   const {
@@ -22,17 +22,17 @@ function App() {
     <>
       <Navbar
         scroller={scroller}
-        // language={language}
-        // getTexts={getTexts}
-        // setLanguage={setLanguage}
+        language={language}
+        getTexts={getTexts}
+        setLanguage={setLanguage}
       />
       <div id="main-container" className="main-container" data-scroll-container>
-        <Landing />
-        <Marquee1 />
-        <About />
-        <Projects />
-        <Marquee1 />
-        <ContactForm />
+        <Landing getTexts={getTexts} />
+        <About getTexts={getTexts} />
+        <Projects getTexts={getTexts} />
+        <Marquee1 getTexts={getTexts} />
+        <ContactForm getTexts={getTexts} />
+        <BackToTop scroller={scroller} getTexts={getTexts} />
       </div>
     </>
   );

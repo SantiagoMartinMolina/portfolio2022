@@ -6,7 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useOnScreen from "../../hooks/useOnScreen";
 
-interface Props {
+interface PropsPI {
   title: string;
   description: string;
   repoLink: string;
@@ -14,9 +14,12 @@ interface Props {
   image: string | null;
   video: string | null;
   icons: (() => JSX.Element)[];
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
 }
 
-const ProjectItem: FC<Props> = ({
+const ProjectItem: FC<PropsPI> = ({
   title,
   description,
   demoLink,
@@ -24,7 +27,9 @@ const ProjectItem: FC<Props> = ({
   image,
   video,
   icons,
+  getTexts,
 }) => {
+  const text = getTexts("projects");
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(ref, 0.5);
   return (
@@ -43,7 +48,7 @@ const ProjectItem: FC<Props> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver repositorio
+              {text.viewRepo}
             </a>
             <a
               className="btn"
@@ -51,7 +56,7 @@ const ProjectItem: FC<Props> = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver demo
+              {text.viewDemo}
             </a>
           </div>
         </div>
@@ -83,7 +88,15 @@ const ProjectItem: FC<Props> = ({
   );
 };
 
-const Projects = () => {
+interface PropsP {
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
+}
+
+const Projects: FC<PropsP> = ({ getTexts }) => {
+  const text = getTexts("projects");
+
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -109,13 +122,13 @@ const Projects = () => {
   }, []);
 
   const projects = projectsData.map((project) => (
-    <ProjectItem key={project.title} {...project} />
+    <ProjectItem key={project.title} {...project} getTexts={getTexts} />
   ));
 
   return (
     <StyledProjects data-scroll-section id="projects">
       <h2 className="title">
-        <span data-scroll>Proyectos</span>
+        <span data-scroll>{text.projects}</span>
       </h2>
       <div className="projects-container" ref={ref}>
         {projects}

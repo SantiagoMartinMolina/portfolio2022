@@ -1,8 +1,16 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { StyledSocialMediaLinks } from "./styles";
 import gsap from "gsap";
 
-const SocialMediaLinks = () => {
+interface Props {
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
+}
+
+const SocialMediaLinks: FC<Props> = ({ getTexts }) => {
+  const text = getTexts("socialMediaLinks");
+
   useEffect(() => {
     if (window.innerWidth > 1024) {
       gsap.to(".links-container a", {
@@ -22,7 +30,7 @@ const SocialMediaLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Linkedin
+            {text.linkedIn}
           </a>
         </li>
         <li>
@@ -31,7 +39,7 @@ const SocialMediaLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Github
+            {text.github}
           </a>
         </li>
         <li>
@@ -40,7 +48,7 @@ const SocialMediaLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+            {text.twitter}
           </a>
         </li>
       </ul>

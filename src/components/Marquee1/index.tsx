@@ -1,7 +1,15 @@
 import { StyledMarquee1 } from "./styles";
 import { FaReact } from "react-icons/fa";
+import { FC } from "react";
 
-const Marquee1 = () => {
+interface Props {
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
+}
+
+const Marquee1: FC<Props> = ({ getTexts }) => {
+  const text = getTexts("marquee1");
   return (
     <StyledMarquee1 data-scroll-section>
       <div className="top">
@@ -11,7 +19,7 @@ const Marquee1 = () => {
           data-scroll-speed="2"
           data-scroll-direction="horizontal"
         >
-          <span>Open to work</span>{" "}
+          <span>{text.openToWork}</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
@@ -60,11 +68,11 @@ const Marquee1 = () => {
           data-scroll-speed="-2"
           data-scroll-direction="horizontal"
         >
-          <span>Santiago Molina</span>{" "}
+          <span>{text.fullName}</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Portfolio 2022</span>{" "}
+          <span>{text.portfolio2022}</span>{" "}
           <span>
             <FaReact />
           </span>{" "}

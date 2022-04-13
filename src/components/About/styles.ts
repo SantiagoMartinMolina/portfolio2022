@@ -5,8 +5,24 @@ export const StyledAbout = styled.section`
   min-height: 100vh;
   padding: 2em;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+
+  .btn-cv {
+    color: #000;
+    text-decoration: none;
+    transition: all 200ms ease;
+    border-radius: 20px;
+    padding: 0.3em 0.6em;
+    font-size: 1.5vw;
+
+    &:hover {
+      background-color: var(--details-color);
+      transform: scale(1.07);
+      color: #fafafa;
+    }
+  }
 
   .about-container {
     height: 100%;
@@ -38,7 +54,7 @@ export const StyledAbout = styled.section`
       opacity: 0;
       font-size: 1.4em;
       text-transform: none;
-      width: 80ch;
+      max-width: 900px;
       .wrapper {
         opacity: 0;
         transform: translate(0);
@@ -63,6 +79,16 @@ export const StyledAbout = styled.section`
       .text-container {
         font-size: 1em;
         width: 100%;
+      }
+    }
+
+    .btn-cv {
+      font-size: 1.2em;
+      padding: 0;
+      border-radius: 0px;
+
+      &:hover {
+        background-color: transparent;
       }
     }
   }
