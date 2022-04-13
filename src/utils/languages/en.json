@@ -1,9 +1,50 @@
 {
+    "navbar": {
+        "logo": "Sm",
+        "btnMenu": "Menu",
+        "aboutMe": "About me",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "landing": {
+        "name": "Santiago",
+        "lastName": "Molina",
+        "frontend": "Frontend",
+        "web": "Web",
+        "developer": "Developer",
+        "portfolio": "Portfolio",
+        "year": "2022"
+    },
     "about": {
-        "title": "About me",
-        "description": "This is a description"
+        "aboutMe":"About me",
+        "description": "I'm from Tucuman, Argentina. Cuando empecé mi etapa universitaria me inscribí a la carrera de ingeniería en sistemas para poder entender y aprender mas del mundo IT, asi hasta llegar a tercer año. Muy convencido de que mi enfoque era más hacia la programación, decidí darle ese rumbo a mi vida y comencé a estudiar desarrollo web, hasta que me gradué como fullstack developer (aunque siempre me atrajo mas el frontend). Soy un programador que busca un equipo de trabajo para poder aplicar mis conocimientos, adquirir experiencia, aprender mucho más, y crecer profesionalmente en esta carrera que me apasiona.",
+        "downloadCV": "Download resume"
     },
     "projects": {
-        "title": "Projects"
+        "projects": "My projects",
+        "viewRepo": "See repository",
+        "viewDemo": "See demo"
+    },
+    "marquee1": {
+        "openToWork": "Open to work",
+        "fullName": "Santiago Molina",
+        "portfolio2022": "Portfolio 2022"
+    },
+    "contactForm": {
+        "contact": "Contact",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send",
+        "email1": "molina.santiago.martin@gmail.com"
+    },
+    "socialMediaLinks": {
+        "linkedIn": "LinkedIn",
+        "github": "Github",
+        "twitter": "Twitter"
+    },
+    "backToTop": {
+        "back": "Back to top"
     }
+
 }
