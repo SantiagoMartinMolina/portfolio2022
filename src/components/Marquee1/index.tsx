@@ -11,43 +11,43 @@ const Marquee1 = () => {
           data-scroll-speed="2"
           data-scroll-direction="horizontal"
         >
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Portfolio 2022</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Portfolio 2022</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Portfolio 2022</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Portfolio 2022</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>{" "}
-          <span>Santiago Molina</span>{" "}
+          <span>Open to work</span>{" "}
           <span>
             <FaReact />
           </span>
