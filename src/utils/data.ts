@@ -4,6 +4,15 @@ import piDogs from "../assets/images/pi-dogs.png";
 import appClima from "../assets/images/clima02.png";
 import arthub from "../assets/video/arthubEcommerce.mp4";
 
+import NextIcon from "./icons/NextIcon";
+import StyledComponentsIcon from "./icons/StyledComponentsIcon";
+import ExpressIcon from "./icons/ExpressIcon";
+import PostgresIcon from "./icons/PostgresIcon";
+import ReactIcon from "./icons/ReactIcon";
+import ReactQueryIcon from "./icons/ReactQueryIcon";
+import ReduxIcon from "./icons/ReduxIcon";
+import TSIcon from "./icons/TSIcon";
+
 const projectsData = [
   {
     title: "Movye",
@@ -13,6 +22,7 @@ const projectsData = [
     demoLink: "https://movye.vercel.app/",
     image: movye,
     video: null,
+    icons: [NextIcon, StyledComponentsIcon],
   },
   {
     title: "Arthub",
@@ -22,15 +32,17 @@ const projectsData = [
     demoLink: "https://arthub-project.vercel.app/",
     image: null,
     video: arthub,
+    icons: [ReactIcon, ReduxIcon, ExpressIcon, PostgresIcon],
   },
   {
     title: "Memotest",
     description:
-      "Clásico juego Memotest, con la posibilidad de elegir 2 temáticas.",
+      "Clásico juego Memotest, con la posibilidad de elegir 2 temáticas. Las tecnologías utilizadas fueron: typescript y styled components",
     repoLink: "https://github.com/SantiagoMartinMolina/memotest",
     demoLink: "https://memotestv2.vercel.app/",
     image: memotest,
     video: null,
+    icons: [TSIcon, ReactQueryIcon, StyledComponentsIcon],
   },
   {
     title: "PI - Dogs",
@@ -40,6 +52,7 @@ const projectsData = [
     demoLink: "https://pi-dogs.vercel.app/",
     image: piDogs,
     video: null,
+    icons: [ReactIcon, ReduxIcon, ExpressIcon, PostgresIcon],
   },
   {
     title: "App-Clima",
@@ -49,6 +62,7 @@ const projectsData = [
     demoLink: "https://app-clima-self.vercel.app/",
     image: appClima,
     video: null,
+    icons: [ReactIcon, StyledComponentsIcon],
   },
 ];
 
