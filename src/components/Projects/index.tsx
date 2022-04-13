@@ -13,6 +13,7 @@ interface Props {
   demoLink: string;
   image: string | null;
   video: string | null;
+  icons: (() => JSX.Element)[];
 }
 
 const ProjectItem: FC<Props> = ({
@@ -22,6 +23,7 @@ const ProjectItem: FC<Props> = ({
   repoLink,
   image,
   video,
+  icons,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(ref, 0.5);
@@ -58,12 +60,23 @@ const ProjectItem: FC<Props> = ({
             <video autoPlay muted loop>
               <source src={video} type="video/mp4" />
             </video>
+            <div className="svg-container">
+              {icons.map((Elem, index) => (
+                <Elem key={index} />
+              ))}
+            </div>
           </div>
         ) : (
           <div
             className="project-item-image"
             style={{ backgroundImage: `url(${image})` }}
-          ></div>
+          >
+            <div className="svg-container">
+              {icons.map((Elem, index) => (
+                <Elem key={index} />
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </StyledProjectItem>
@@ -77,18 +90,17 @@ const Projects = () => {
     if (window.innerWidth > 1024) {
       setTimeout(() => {
         const sections = gsap.utils.toArray(".project-item-wrapper");
-        console.log(sections);
         gsap.to(sections, {
           xPercent: -100 * (sections.length - 1),
           ease: "none",
           scrollTrigger: {
             start: "top top",
+            end: () => `+=${ref.current!.offsetWidth}`,
             trigger: ref.current,
             scroller: "#main-container",
             pin: true,
             scrub: 0.5,
             snap: 1 / (sections.length - 1),
-            end: () => `+=${ref.current!.offsetWidth}`,
           },
         });
         ScrollTrigger.refresh();

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledProjects = styled.section`
   background-color: rgb(12, 12, 12);
-  /* margin: 0 -5vw; */
   position: relative;
   overflow: hidden;
 
@@ -24,27 +23,29 @@ export const StyledProjects = styled.section`
   }
 
   .projects-container {
-    /* height: 80vh; */
-    /* padding: 3em; */
     width: fit-content;
     display: flex;
     flex-wrap: nowrap;
-    /* background-color: gold; */
     height: 100vh;
   }
 
   @media (max-width: 1024px) {
+    .title {
+      span {
+        transform: translateY(0);
+      }
+    }
     .projects-container {
       height: auto;
       display: block;
       width: 90%;
       margin: auto;
+      margin-bottom: calc(50px + 4em);
     }
   }
 `;
 
 export const StyledProjectItem = styled.div`
-  /* aspect-ratio: 16/9; */
   height: 100%;
   width: 100vw;
   display: flex;
@@ -52,7 +53,7 @@ export const StyledProjectItem = styled.div`
   align-items: center;
   padding: 2em;
 
-  /* &.project-item-wrapper.is-reveal {
+  &.project-item-wrapper.is-reveal {
     .project-item-image,
     .banner {
       transform: scale(1);
@@ -72,14 +73,12 @@ export const StyledProjectItem = styled.div`
         opacity: 1;
       }
     }
-  } */
+  }
 
   .project-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 2em; */
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     position: relative;
@@ -87,13 +86,8 @@ export const StyledProjectItem = styled.div`
     gap: 2em;
 
     .project-item-info {
-      /* position: absolute;
-      left: 0;
-      bottom: 10%; */
       z-index: 1;
-      /* transform: translateX(-20%); */
       color: inherit;
-      /* background-color: red; */
       flex: 1;
       will-change: transform;
       transform: scale(0.7);
@@ -101,14 +95,12 @@ export const StyledProjectItem = styled.div`
       filter: grayscale(100%) sepia(20%) brightness(80%);
       opacity: 0.4;
       transform-origin: left;
-      /* mix-blend-mode: difference; */
 
       .project-info-title {
         line-height: 6vw;
         font-family: "Bai Janjuree", sans-serif;
         font-weight: 600;
         font-size: 6vw;
-        /* mix-blend-mode: difference; */
       }
 
       .project-info-description {
@@ -124,7 +116,7 @@ export const StyledProjectItem = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 1em;
+        margin: 1em 0;
 
         a {
           text-decoration: none;
@@ -159,7 +151,6 @@ export const StyledProjectItem = styled.div`
       background-position: left;
       background-size: cover;
       transform-origin: right;
-      /* max-width: 800px; */
 
       height: 80%;
       will-change: transform;
@@ -167,10 +158,26 @@ export const StyledProjectItem = styled.div`
       transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
       filter: grayscale(100%) sepia(20%) brightness(80%);
       border-radius: 10px;
-      overflow: hidden;
+
+      .svg-container {
+        position: absolute;
+        top: calc(100% + 1em);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+      }
+
+      svg {
+        width: 50px;
+        height: 50px;
+        fill: #fafafa;
+      }
     }
 
     .banner {
+      background-color: #222;
       video {
         width: 100%;
         height: 100%;
@@ -182,14 +189,36 @@ export const StyledProjectItem = styled.div`
     padding: 0;
     width: 100%;
 
+    &.project-item-wrapper.is-reveal {
+      .project-item-image,
+      .banner {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .project-item {
+        .project-item-info {
+          transform: scale(1);
+          transform: translateX(0);
+          filter: none;
+          opacity: 1;
+        }
+      }
+    }
+
     .project-item {
       display: block;
 
       .project-item-info {
+        margin-top: calc(50px + 4em);
         filter: none;
         opacity: 1;
         transform: scale(1);
         transition: none;
+
+        .project-info-description {
+          font-weight: 400;
+        }
       }
 
       .project-item-image,
