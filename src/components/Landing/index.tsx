@@ -1,8 +1,17 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { StyledLanding } from "./styles";
 import gsap from "gsap";
+import SocialMediaLinks from "../SocialMediaLinks";
 
-const Landing = () => {
+interface Props {
+  getTexts: (key: string) => {
+    [key: string]: string;
+  };
+}
+
+const Landing: FC<Props> = ({ getTexts }) => {
+  const text = getTexts("landing");
+
   useEffect(() => {
     if (window.innerWidth > 1024) {
       gsap.from(".landing-centered span", {
@@ -11,12 +20,6 @@ const Landing = () => {
         ease: "power4",
         stagger: 0.1,
       });
-
-      gsap.to(".landing-bottom a", {
-        y: "0%",
-        duration: 0.5,
-        stagger: 0.15,
-      });
     }
   }, []);
 
@@ -24,50 +27,20 @@ const Landing = () => {
     <StyledLanding data-scroll-section>
       <div className="landing-centered">
         <h2>
-          <span>Santiago</span> <span>Molina</span>
+          <span>{text.name}</span> <span>{text.lastName}</span>
         </h2>
         <h2>
-          <span>Frontend</span>
+          <span>{text.frontend}</span>
         </h2>
         <h2>
-          <span>Web</span> <span>developer</span>
+          <span>{text.web}</span> <span>{text.developer}</span>
         </h2>
         <p className="subtitle">
-          <span>Portfolio</span> <span>2022</span>
+          <span>{text.portfolio}</span> <span>{text.year}</span>
         </p>
       </div>
 
-      <div className="landing-bottom">
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/santiago-molina-dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkedin
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/SantiagoMartinMolina"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/santidev7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
-        </ul>
-      </div>
+      <SocialMediaLinks getTexts={getTexts} />
     </StyledLanding>
   );
 };
