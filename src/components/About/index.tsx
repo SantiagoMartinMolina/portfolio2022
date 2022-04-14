@@ -8,9 +8,10 @@ interface Props {
   getTexts: (key: string) => {
     [key: string]: string;
   };
+  language: string;
 }
 
-const About: FC<Props> = ({ getTexts }) => {
+const About: FC<Props> = ({ getTexts, language }) => {
   const text = getTexts("about");
 
   const ref = useRef<HTMLDivElement>(null);
@@ -54,7 +55,11 @@ const About: FC<Props> = ({ getTexts }) => {
       </div>
       <a
         className="btn-cv"
-        href="Santiago_molina_CV.pdf"
+        href={
+          language === "ES"
+            ? "Santiago_molina_CV.pdf"
+            : "Santiago-molina-CV.pdf"
+        }
         target="_blank"
         rel="noopener noreferrer"
       >

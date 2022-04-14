@@ -14,8 +14,8 @@ export const StyledAbout = styled.section`
     text-decoration: none;
     transition: all 200ms ease;
     border-radius: 20px;
-    padding: 0.3em 0.6em;
-    font-size: 1.5vw;
+    padding: 0.6em 1.2em;
+    font-size: 1.25vw;
 
     &:hover {
       background-color: var(--details-color);
