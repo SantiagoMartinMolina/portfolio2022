@@ -18,13 +18,13 @@ export const StyledSocialMediaLinks = styled.div`
     a {
       text-decoration: none;
       color: #fafafa;
-      font-size: 1.5vw;
+      font-size: 1.25vw;
       font-weight: 300;
       position: relative;
       display: flex;
       overflow: hidden;
       border-radius: 20px;
-      padding: 0.3em 0.6em;
+      padding: 0.6em 1.2em;
       &:hover {
         background-color: var(--details-color);
       }
