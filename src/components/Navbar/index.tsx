@@ -43,7 +43,7 @@ const Navbar: FC<Props> = ({ scroller, getTexts, language, setLanguage }) => {
 
   const showMenu = () => {
     setIsActive(true);
-    const detailsColor = "#8a0000";
+    const detailsColor = "#c30404";
     gsap
       .timeline()
       .to(".nav-bg", {
@@ -58,7 +58,7 @@ const Navbar: FC<Props> = ({ scroller, getTexts, language, setLanguage }) => {
           y: "0%",
           opacity: 1,
           duration: 0.02,
-          stagger: 0.05, // 0.1 seconds between when each "a" element starts animating
+          stagger: 0.05,
         },
         "<"
       )
@@ -68,7 +68,7 @@ const Navbar: FC<Props> = ({ scroller, getTexts, language, setLanguage }) => {
           y: "0%",
           opacity: 1,
           duration: 0.02,
-          stagger: 0.05, // 0.1 seconds between when each "a" element starts animating
+          stagger: 0.05,
         },
         "<"
       )

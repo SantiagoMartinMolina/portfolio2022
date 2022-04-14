@@ -15,10 +15,10 @@ export const StyledNavbar2 = styled.header`
     margin-left: 32px;
     line-height: 0.75;
     overflow: hidden;
+    -webkit-text-stroke: 0.03em #000;
 
     span {
       display: inline-block;
-      mix-blend-mode: difference;
     }
   }
 
@@ -37,7 +37,6 @@ export const StyledNavbar2 = styled.header`
     }
 
     .menu-btn {
-      background-color: inherit;
       border: 1px solid #000;
       font-weight: 600;
       border-radius: 20px;
@@ -81,7 +80,6 @@ export const StyledNavbar2 = styled.header`
         button {
           color: inherit;
           font-size: 1em;
-          /* display: block; */
           overflow: hidden;
           transition: 0.3s;
           position: relative;
