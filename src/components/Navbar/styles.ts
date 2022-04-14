@@ -41,7 +41,7 @@ export const StyledNavbar2 = styled.header`
       font-weight: 600;
       border-radius: 20px;
       padding: 0.5em 1em;
-      background-color: #fafafa;
+      background-color: var(--bg-color-light);
       text-align: center;
       margin-bottom: 2em;
       z-index: 10;
@@ -104,12 +104,13 @@ export const StyledNavbar2 = styled.header`
       opacity: 0;
       transform: scale(0.9);
       z-index: 1;
+
       div {
         width: 100%;
         height: 100%;
-        background: #fafafa;
+        background-color: var(--bg-color-light);
         border-radius: 20px;
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
       }
     }
   }

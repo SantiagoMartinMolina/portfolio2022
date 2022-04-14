@@ -19,22 +19,20 @@ function App() {
   const scroller = useScrollSettings(true)!;
 
   return (
-    <>
+    <main id="main-container" className="main-container" data-scroll-container>
+      <Landing getTexts={getTexts} />
+      <About getTexts={getTexts} language={language} />
+      <Projects getTexts={getTexts} />
+      <Marquee1 getTexts={getTexts} />
+      <ContactForm getTexts={getTexts} />
+      <BackToTop scroller={scroller} getTexts={getTexts} />
       <Navbar
         scroller={scroller}
         language={language}
         getTexts={getTexts}
         setLanguage={setLanguage}
       />
-      <div id="main-container" className="main-container" data-scroll-container>
-        <Landing getTexts={getTexts} />
-        <About getTexts={getTexts} />
-        <Projects getTexts={getTexts} />
-        <Marquee1 getTexts={getTexts} />
-        <ContactForm getTexts={getTexts} />
-        <BackToTop scroller={scroller} getTexts={getTexts} />
-      </div>
-    </>
+    </main>
   );
 }
 

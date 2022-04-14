@@ -114,7 +114,7 @@ const Navbar: FC<Props> = ({ scroller, getTexts, language, setLanguage }) => {
     });
 
     gsap.to(".menu-btn", {
-      backgroundColor: "#fafafa",
+      backgroundColor: "#f5f0ec",
       color: "#000",
       border: "1px solid #000",
     });

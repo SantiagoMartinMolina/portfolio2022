@@ -12,7 +12,7 @@
   --bg-color-light: #f5f0ec;
 
   --text-color: #fafafa;
-  --details-color: #8a0000;
+  --details-color: #c30404;
 
 }
 
@@ -27,7 +27,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Bai Jamjuree', sans-serif;
-  /* font-family: 'syncopate', sans-serif; */
 
 }
 
