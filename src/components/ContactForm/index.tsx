@@ -53,7 +53,9 @@ const ContactForm: FC<Props> = ({ getTexts }) => {
       </form>
       <div className="container">
         <SocialMediaLinks getTexts={getTexts} />
-        <p>{text.email1}</p>
+        <a className="btn-email" href="mailto:molina.santiago.martin@gmail.com">
+          {text.email1}
+        </a>
       </div>
     </StyledContactForm>
   );

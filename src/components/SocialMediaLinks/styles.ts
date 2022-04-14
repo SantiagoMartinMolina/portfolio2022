@@ -25,8 +25,11 @@ export const StyledSocialMediaLinks = styled.div`
       overflow: hidden;
       border-radius: 20px;
       padding: 0.6em 1.2em;
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--details-color);
+        outline: none;
+        color: #fafafa;
       }
     }
   }

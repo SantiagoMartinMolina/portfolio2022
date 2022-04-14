@@ -108,12 +108,15 @@ export const StyledContactForm = styled.section`
 
     a {
       color: #000;
-      &:hover {
-        color: #fafafa;
-      }
     }
-    p {
-      color: #000;
+    .btn-email {
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        outline: none;
+        text-decoration: underline #000;
+      }
     }
   }
 
