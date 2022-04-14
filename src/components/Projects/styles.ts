@@ -98,7 +98,7 @@ export const StyledProjectItem = styled.div`
 
       .project-info-title {
         line-height: 6vw;
-        font-family: "Bai Janjuree", sans-serif;
+        font-family: "Bai Jamjuree", sans-serif;
         font-weight: 600;
         font-size: 6vw;
       }
