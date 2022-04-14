@@ -13,7 +13,7 @@ interface PropsPI {
   demoLink: string;
   image: string | null;
   video: string | null;
-  icons: (() => JSX.Element)[];
+  icons: (string | (() => JSX.Element))[][];
   getTexts: (key: string) => {
     [key: string]: string;
   };
@@ -66,9 +66,15 @@ const ProjectItem: FC<PropsPI> = ({
               <source src={video} type="video/mp4" />
             </video>
             <div className="svg-container">
-              {icons.map((Elem, index) => (
-                <Elem key={index} />
-              ))}
+              {icons.map((icon, index) => {
+                const [name, Icon] = icon;
+                return (
+                  <div key={index}>
+                    <Icon />
+                    <span>{name}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ) : (
@@ -77,9 +83,15 @@ const ProjectItem: FC<PropsPI> = ({
             style={{ backgroundImage: `url(${image})` }}
           >
             <div className="svg-container">
-              {icons.map((Elem, index) => (
-                <Elem key={index} />
-              ))}
+              {icons.map((icon, index) => {
+                const [name, Icon] = icon;
+                return (
+                  <div key={index}>
+                    <Icon />
+                    <span>{name}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}

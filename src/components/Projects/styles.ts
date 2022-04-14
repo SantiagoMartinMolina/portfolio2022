@@ -101,6 +101,7 @@ export const StyledProjectItem = styled.div`
         font-family: "Bai Jamjuree", sans-serif;
         font-weight: 600;
         font-size: 6vw;
+        text-shadow: 3px 3px 5px #000;
       }
 
       .project-info-description {
@@ -110,11 +111,11 @@ export const StyledProjectItem = styled.div`
         font-size: 24px;
         margin-top: 1em;
         text-transform: none;
+        text-shadow: 3px 3px 5px #000;
       }
 
       .project-info-links {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 1em 0;
 
@@ -166,13 +167,23 @@ export const StyledProjectItem = styled.div`
         transform: translateX(-50%);
         display: flex;
         align-items: center;
-        gap: 1.5em;
+        gap: 2em;
+        width: fit-content;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+        }
       }
 
       svg {
         width: 50px;
         height: 50px;
         fill: #fafafa;
+      }
+
+      span {
+        font-size: 0.6em;
       }
     }
 

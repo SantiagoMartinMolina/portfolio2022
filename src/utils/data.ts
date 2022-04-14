@@ -22,7 +22,10 @@ const projectsData = [
     demoLink: "https://movye.vercel.app/",
     image: movye,
     video: null,
-    icons: [NextIcon, StyledComponentsIcon],
+    icons: [
+      ["Next.js", NextIcon],
+      ["Styled components", StyledComponentsIcon],
+    ],
   },
   {
     title: "Arthub",
@@ -32,7 +35,12 @@ const projectsData = [
     demoLink: "https://arthub-project.vercel.app/",
     image: null,
     video: arthub,
-    icons: [ReactIcon, ReduxIcon, ExpressIcon, PostgresIcon],
+    icons: [
+      ["React", ReactIcon],
+      ["Redux", ReduxIcon],
+      ["Express", ExpressIcon],
+      ["PostgreSQL", PostgresIcon],
+    ],
   },
   {
     title: "Memotest",
@@ -42,7 +50,11 @@ const projectsData = [
     demoLink: "https://memotestv2.vercel.app/",
     image: memotest,
     video: null,
-    icons: [TSIcon, ReactQueryIcon, StyledComponentsIcon],
+    icons: [
+      ["Typescript", TSIcon],
+      ["React query", ReactQueryIcon],
+      ["Styled components", StyledComponentsIcon],
+    ],
   },
   {
     title: "PI - Dogs",
@@ -52,7 +64,12 @@ const projectsData = [
     demoLink: "https://pi-dogs.vercel.app/",
     image: piDogs,
     video: null,
-    icons: [ReactIcon, ReduxIcon, ExpressIcon, PostgresIcon],
+    icons: [
+      ["React", ReactIcon],
+      ["Redux", ReduxIcon],
+      ["Express", ExpressIcon],
+      ["PostgreSQL", PostgresIcon],
+    ],
   },
   {
     title: "App-Clima",
@@ -62,7 +79,10 @@ const projectsData = [
     demoLink: "https://app-clima-self.vercel.app/",
     image: appClima,
     video: null,
-    icons: [ReactIcon, StyledComponentsIcon],
+    icons: [
+      ["React", ReactIcon],
+      ["Styled components", StyledComponentsIcon],
+    ],
   },
 ];
 
