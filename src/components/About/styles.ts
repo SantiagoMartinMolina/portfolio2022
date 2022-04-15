@@ -55,9 +55,21 @@ export const StyledAbout = styled.section`
       font-size: 1.4em;
       text-transform: none;
       max-width: 900px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        width: 100%;
+      }
+
       .wrapper {
         opacity: 0;
         transform: translate(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       &.is-reveal {
         .wrapper {
