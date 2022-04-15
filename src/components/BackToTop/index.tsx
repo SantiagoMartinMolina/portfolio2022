@@ -35,7 +35,7 @@ const BackToTop: FC<Props> = ({ scroller, getTexts }) => {
       style={{ display: showScroll ? "flex" : "none" }}
     >
       <span>
-        {text.back} <BsArrowUp />
+        <span className="text">{text.back}</span> <BsArrowUp />
       </span>
     </StyledBackToTop>
   );

@@ -140,8 +140,8 @@ export const StyledContactForm = styled.section`
           color: #000;
         }
       }
-      p {
-        margin-top: 1em;
+      .btn-email {
+        margin: 1em 0;
       }
     }
   }

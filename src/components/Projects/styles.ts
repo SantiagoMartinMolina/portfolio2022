@@ -177,8 +177,8 @@ export const StyledProjectItem = styled.div`
       }
 
       svg {
-        width: 50px;
-        height: 50px;
+        width: 25px;
+        height: 25px;
         fill: #fafafa;
       }
 
@@ -215,6 +215,10 @@ export const StyledProjectItem = styled.div`
           opacity: 1;
         }
       }
+
+      .project-info-links {
+        justify-content: space-around;
+      }
     }
 
     .project-item {
@@ -229,6 +233,7 @@ export const StyledProjectItem = styled.div`
 
         .project-info-description {
           font-weight: 400;
+          font-size: 1em;
         }
       }
 
@@ -240,6 +245,15 @@ export const StyledProjectItem = styled.div`
         filter: none;
         transform: scale(1);
         transition: none;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        span {
+          font-size: 0.4em;
+        }
       }
     }
   }

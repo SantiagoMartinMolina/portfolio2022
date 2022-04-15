@@ -6,7 +6,6 @@ export const StyledBackToTop = styled.button`
   position: fixed;
   bottom: 2em;
   right: 2em;
-  animation: fadeIn 0.3s;
   transition: all 0.3s;
   padding: 0.3em;
   background-color: transparent;
@@ -16,9 +15,13 @@ export const StyledBackToTop = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: #000;
-    font-size: 1em;
+    color: #777;
+    font-size: 1.2em;
     text-transform: uppercase;
+    transition: color 200ms ease;
+    &:hover {
+      color: var(--details-color);
+    }
   }
 
   svg {
@@ -26,12 +29,21 @@ export const StyledBackToTop = styled.button`
     margin-left: 10px;
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
+  @media (max-width: 1024px) {
+    background-color: var(--details-color);
+    display: flex;
+    justify-content: center;
+    padding: 0.7em;
+    border-radius: 50%;
+    bottom: 7em;
+
+    .text {
+      display: none;
     }
-    100% {
-      opacity: 1;
+    svg {
+      font-size: 1.5em;
+      margin-left: 0;
+      color: #fafafa;
     }
   }
 `;
