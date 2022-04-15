@@ -36,7 +36,9 @@
         "email": "Email",
         "message": "Mensaje",
         "send": "Enviar",
-        "email1": "molina.santiago.martin@gmail.com"
+        "sending": "Enviando",
+        "email1": "molina.santiago.martin@gmail.com",
+        "success": "Tu mensaje ha sido enviado"
     },
     "socialMediaLinks": {
         "linkedIn": "LinkedIn",
@@ -44,7 +46,7 @@
         "twitter": "Twitter"
     },
     "backToTop": {
-        "back": "Back to top"
+        "back": "Volver arriba"
     }
 
 }

@@ -1,7 +1,8 @@
 import { StyledContactForm } from "./styles";
 import emailjs from "@emailjs/browser";
 import SocialMediaLinks from "../SocialMediaLinks";
-import { FC } from "react";
+import { FC, useState } from "react";
+import { ImSpinner2 } from "react-icons/im";
 
 interface Props {
   getTexts: (key: string) => {
@@ -11,8 +12,13 @@ interface Props {
 
 const ContactForm: FC<Props> = ({ getTexts }) => {
   const text = getTexts("contactForm");
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSent(false);
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -23,7 +29,8 @@ const ContactForm: FC<Props> = ({ getTexts }) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setLoading(false);
+          setSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -49,8 +56,17 @@ const ContactForm: FC<Props> = ({ getTexts }) => {
           <input type="email" placeholder={text.email} name="email" required />
         </div>
         <textarea placeholder={text.message} name="message" required />
-        <button type="submit">{text.send}</button>
+        <button type="submit" disabled={loading ? true : undefined}>
+          {loading && <ImSpinner2 className="spinner" />}
+          {loading && text.sending}
+          {!loading && text.send}
+        </button>
       </form>
+      {sent && (
+        <p className="success">
+          <span className="success-text">{text.success}</span>
+        </p>
+      )}
       <div className="container">
         <SocialMediaLinks getTexts={getTexts} />
         <a className="btn-email" href="mailto:molina.santiago.martin@gmail.com">

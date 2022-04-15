@@ -36,7 +36,9 @@
         "email": "Email",
         "message": "Message",
         "send": "Send",
-        "email1": "molina.santiago.martin@gmail.com"
+        "sending": "Sending",
+        "email1": "molina.santiago.martin@gmail.com",
+        "success": "Your message has been sent"
     },
     "socialMediaLinks": {
         "linkedIn": "LinkedIn",

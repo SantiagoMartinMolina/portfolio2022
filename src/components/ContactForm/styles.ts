@@ -1,4 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const rotate = keyframes`
+0%{
+  transform: rotateZ(0);
+}
+100%{
+  transform: rotateZ(360deg);
+}
+`;
+
+const reveal = keyframes`
+0%{
+  transform: translateY(100%);
+}
+100%{
+  transform: translateY(0);
+}
+`;
 
 export const StyledContactForm = styled.section`
   display: flex;
@@ -83,6 +101,8 @@ export const StyledContactForm = styled.section`
       cursor: pointer;
       transition: all 200ms ease;
       outline: none;
+      display: flex;
+      align-items: center;
 
       &:hover,
       &:focus {
@@ -94,6 +114,26 @@ export const StyledContactForm = styled.section`
       &:active {
         transform: scale(1);
       }
+
+      .spinner {
+        animation: ${rotate} 1.2s linear infinite;
+        margin-right: 0.5em;
+      }
+    }
+
+    button[disabled] {
+      opacity: 0.7;
+      cursor: default;
+      transform: none !important;
+    }
+  }
+  .success {
+    margin-top: 2em;
+    color: #484d54;
+    overflow: hidden;
+    .success-text {
+      display: inline-block;
+      animation: ${reveal} 350ms cubic-bezier(0.77, 0, 0.175, 1);
     }
   }
 
