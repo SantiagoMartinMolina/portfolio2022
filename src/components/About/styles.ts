@@ -81,6 +81,7 @@ export const StyledAbout = styled.section`
   }
 
   @media (max-width: 1024px) {
+    padding: 1em;
     .about-container {
       .title {
         span {
