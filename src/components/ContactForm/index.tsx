@@ -61,12 +61,12 @@ const ContactForm: FC<Props> = ({ getTexts }) => {
           {loading && text.sending}
           {!loading && text.send}
         </button>
+        {sent && (
+          <p className="success">
+            <span className="success-text">{text.success}</span>
+          </p>
+        )}
       </form>
-      {sent && (
-        <p className="success">
-          <span className="success-text">{text.success}</span>
-        </p>
-      )}
       <div className="container">
         <SocialMediaLinks getTexts={getTexts} />
         <a className="btn-email" href="mailto:molina.santiago.martin@gmail.com">
