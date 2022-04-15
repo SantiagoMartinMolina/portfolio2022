@@ -38,7 +38,10 @@
         "send": "Send",
         "sending": "Sending",
         "email1": "molina.santiago.martin@gmail.com",
-        "success": "Your message has been sent"
+        "success": "Your message has been sent",
+        "nameLabel": "Name (required)",
+        "emailLabel": "Email (required)",
+        "messageLabel": "Message (required)"
     },
     "socialMediaLinks": {
         "linkedIn": "LinkedIn",

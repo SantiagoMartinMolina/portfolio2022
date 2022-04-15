@@ -47,15 +47,30 @@ const ContactForm: FC<Props> = ({ getTexts }) => {
       </h2>
       <form onSubmit={sendEmail}>
         <div>
+          <label htmlFor="name">{text.nameLabel}</label>
           <input
+            id="name"
             type="text"
             placeholder={text.name}
             name="from_name"
             required
           />
-          <input type="email" placeholder={text.email} name="email" required />
+          <label htmlFor="email">{text.emailLabel}</label>
+          <input
+            id="email"
+            type="email"
+            placeholder={text.email}
+            name="email"
+            required
+          />
         </div>
-        <textarea placeholder={text.message} name="message" required />
+        <label htmlFor="message">{text.messageLabel}</label>
+        <textarea
+          id="message"
+          placeholder={text.message}
+          name="message"
+          required
+        />
         <button type="submit" disabled={loading ? true : undefined}>
           {loading && <ImSpinner2 className="spinner" />}
           {loading && text.sending}
