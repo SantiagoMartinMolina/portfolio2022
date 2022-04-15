@@ -35,7 +35,6 @@ export const StyledBackToTop = styled.button`
     justify-content: center;
     padding: 0.7em;
     border-radius: 50%;
-    bottom: 7em;
 
     .text {
       display: none;

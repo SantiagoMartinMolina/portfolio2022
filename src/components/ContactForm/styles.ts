@@ -128,6 +128,7 @@ export const StyledContactForm = styled.section`
     }
 
     form {
+      margin-bottom: 5em;
       div {
         flex-direction: column;
       }
