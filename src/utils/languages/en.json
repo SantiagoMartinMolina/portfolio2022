@@ -17,18 +17,18 @@
     },
     "about": {
         "aboutMe":"About me",
-        "description": "I'm from Tucuman, Argentina. When I started my university stage I signed up for a degree in systems engineering to be able to understand and learn more about the IT world. Very convinced that my focus was more to programming, I decided to give my life that direction and I started studying web development until I graduated as a fullstack developer. I am a programmer looking for a work team to be able to apply my knowledge, gain experience, learn much more and grow professionally in this career.",
+        "description": "I'm from Tucuman, Argentina. When I started my college stage I signed up for systems engineering so I'll be able to understand and learn more about the IT world. I was very convinced that my focus was more about programming so I decided to give my life that direction and I started studying web development until I graduated as a fullstack developer. I am a programmer looking for a work team to be able to apply all my knowledge, gain some experience, learn more and grow professionally in this career.",
         "downloadCV": "Download resume"
     },
     "projects": {
         "projects": "My projects",
         "viewRepo": "See repository",
         "viewDemo": "See demo",
-        "Movye": "Web application to search movies, order and filter them. It also allows you to add movies to favorites and watchlist. Used technologies: Next.js and styled components.",
-        "Arthub": "An e-commerce for selling work of art. It was done in a group, using the SCRUM methodology. Used technologies: React, Redux, Express, Sequelize, Firebase, PostgreSQL and authentication with JWT.",
-        "Memotest": "Classic memotest game, with the possibility of choosing 2 themes. Used technologies: typescript and styled components",
-        "PI - Dogs": "Fullstack single project. It consists of an application that shows information on all breeds, it is also possible to create new breeds. Used technologies: React, Redux, Express, Sequelize and PostgreSQL.",
-        "App-Clima": "Web application made with React. It allows you to search for weather data from any city in the world."
+        "Movye": "Web application to search movies, order and filter them. It also allows to add movies to favorites and watchlist. Technologies: Next.js and styled components.",
+        "Arthub": "E-commerce web for selling artworks. It was done in group, using the SCRUM methodology. Technologies: React, Redux, Express, Sequelize, Firebase, PostgreSQL and authentication with JWT.",
+        "Memotest": "Classic memotest game, with the possibility of choosing 2 themes. Technologies: typescript and styled components",
+        "PI - Dogs": "Fullstack single project. It consists of an application that shows information about all dog breeds, it's also possible to create new breeds. Technologies: React, Redux, Express, Sequelize and PostgreSQL.",
+        "App-Clima": "Web application made with React. It allows to search for weather data from any city in the world."
         
     },
     "marquee1": {
