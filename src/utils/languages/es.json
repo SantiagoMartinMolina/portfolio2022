@@ -17,7 +17,7 @@
     },
     "about": {
         "aboutMe":"Sobre mí",
-        "description": "Soy de Tucuman, Argentina. Cuando empecé mi etapa universitaria me inscribí a la carrera de ingeniería en sistemas para poder entender y aprender mas del mundo IT, asi hasta llegar a tercer año. Muy convencido de que mi enfoque era más hacia la programación, decidí darle ese rumbo a mi vida y comencé a estudiar desarrollo web, hasta que me gradué como fullstack developer (aunque siempre me atrajo mas el frontend). Soy un programador que busca un equipo de trabajo para poder aplicar mis conocimientos, adquirir experiencia, aprender mucho más y crecer profesionalmente en esta carrera que me apasiona.",
+        "description": "Soy de Tucuman, Argentina. Cuando empecé mi etapa universitaria me inscribí a la carrera de ingeniería en sistemas para poder entender y aprender mas del mundo IT. Muy convencido de que mi enfoque era más hacia la programación, decidí darle ese rumbo a mi vida y comencé a estudiar desarrollo web, hasta que me gradué como fullstack developer. Soy un programador que busca un equipo de trabajo para poder aplicar mis conocimientos, adquirir experiencia, aprender mucho más y crecer profesionalmente en esta carrera que me apasiona.",
         "downloadCV": "Descargar CV"
     },
     "projects": {
