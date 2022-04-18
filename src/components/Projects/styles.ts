@@ -111,7 +111,7 @@ export const StyledProjectItem = styled.div`
         font-size: 24px;
         margin-top: 1em;
         text-transform: none;
-        text-shadow: 3px 3px 5px #000;
+        text-shadow: 3px 3px 3px #000;
       }
 
       .project-info-links {

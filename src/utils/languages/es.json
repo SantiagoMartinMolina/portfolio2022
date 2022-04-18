@@ -17,13 +17,19 @@
     },
     "about": {
         "aboutMe":"Sobre mí",
-        "description": "Soy de Tucuman, Argentina. Cuando empecé mi etapa universitaria me inscribí a la carrera de ingeniería en sistemas para poder entender y aprender mas del mundo IT, asi hasta llegar a tercer año. Muy convencido de que mi enfoque era más hacia la programación, decidí darle ese rumbo a mi vida y comencé a estudiar desarrollo web, hasta que me gradué como fullstack developer (aunque siempre me atrajo mas el frontend). Soy un programador que busca un equipo de trabajo para poder aplicar mis conocimientos, adquirir experiencia, aprender mucho más, y crecer profesionalmente en esta carrera que me apasiona.",
+        "description": "Soy de Tucuman, Argentina. Cuando empecé mi etapa universitaria me inscribí a la carrera de ingeniería en sistemas para poder entender y aprender mas del mundo IT, asi hasta llegar a tercer año. Muy convencido de que mi enfoque era más hacia la programación, decidí darle ese rumbo a mi vida y comencé a estudiar desarrollo web, hasta que me gradué como fullstack developer (aunque siempre me atrajo mas el frontend). Soy un programador que busca un equipo de trabajo para poder aplicar mis conocimientos, adquirir experiencia, aprender mucho más y crecer profesionalmente en esta carrera que me apasiona.",
         "downloadCV": "Descargar CV"
     },
     "projects": {
         "projects": "Proyectos",
         "viewRepo": "Ver repositorio",
-        "viewDemo": "Ver demo"
+        "viewDemo": "Ver demo",
+        "Movye": "Aplicación web para buscar películas, ordenar y filtrar. También permite agregar películas a Favorites y Watchlist. La información es traída de The Movie DB. Las tecnologías utilizadas fueron Next.js y styled components.",
+        "Arthub": "E-commerce de venta de obras de arte. Se realizó en grupo, utilizando la metodología SCRUM. Las tecnologías utilizadas fueron: React, Redux, Express, Sequelize, Firebase, PostgreSQL y autenticación mediante JWT.",
+        "Memotest": "Clásico juego Memotest, con la posibilidad de elegir 2 temáticas. Las tecnologías utilizadas fueron: typescript y styled components",
+        "PI - Dogs": "Proyecto individual fullstack. Consiste en una aplicación que muestra información de todas las razas de perros, dicha información es traida de una API, tambien es posible crear nuevas razas. Las tecnologías utilizadas fueron: React, Redux, Express, Sequelize y PostgreSQL.",
+        "App-Clima": "Aplicación web realizada con React. Permite buscar los datos del tiempo meteorológico de cualquier ciudad del mundo. La información es traida de una API."
+        
     },
     "marquee1": {
         "openToWork": "Open to work",

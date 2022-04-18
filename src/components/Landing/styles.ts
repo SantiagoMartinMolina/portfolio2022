@@ -22,12 +22,5 @@ export const StyledLanding = styled.section`
         display: inline-block;
       }
     }
-
-    .subtitle {
-      overflow: hidden;
-      span {
-        display: inline-block;
-      }
-    }
   }
 `;

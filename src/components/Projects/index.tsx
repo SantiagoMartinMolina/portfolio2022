@@ -8,7 +8,6 @@ import useOnScreen from "../../hooks/useOnScreen";
 
 interface PropsPI {
   title: string;
-  description: string;
   repoLink: string;
   demoLink: string;
   image: string | null;
@@ -21,7 +20,6 @@ interface PropsPI {
 
 const ProjectItem: FC<PropsPI> = ({
   title,
-  description,
   demoLink,
   repoLink,
   image,
@@ -40,7 +38,7 @@ const ProjectItem: FC<PropsPI> = ({
       <div className="project-item">
         <div className="project-item-info">
           <h1 className="project-info-title">{title}</h1>
-          <p className="project-info-description">{description}</p>
+          <p className="project-info-description">{text[title]}</p>
           <div className="project-info-links">
             <a
               className="btn"

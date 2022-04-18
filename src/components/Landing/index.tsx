@@ -35,9 +35,6 @@ const Landing: FC<Props> = ({ getTexts }) => {
         <h2>
           <span>{text.web}</span> <span>{text.developer}</span>
         </h2>
-        <p className="subtitle">
-          <span>{text.portfolio}</span> <span>{text.year}</span>
-        </p>
       </div>
 
       <SocialMediaLinks getTexts={getTexts} />

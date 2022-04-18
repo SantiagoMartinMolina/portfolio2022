@@ -138,7 +138,6 @@ export const StyledContactForm = styled.section`
     }
   }
   .success {
-    margin-top: 2em;
     color: #484d54;
     overflow: hidden;
     .success-text {
@@ -171,6 +170,10 @@ export const StyledContactForm = styled.section`
   }
 
   @media (max-width: 1024px) {
+    .success {
+      margin-top: 2em;
+    }
+
     .title {
       span {
         transform: translateY(0);
