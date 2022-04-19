@@ -3,17 +3,17 @@ import type { FC } from "react";
 import { StyledNavbar2 } from "./styles";
 import gsap from "gsap";
 import { Scroller } from "../../hooks/useScrollSettings";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
 interface Props {
   scroller: Scroller;
-  language: string;
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-  setLanguage: (lang: string) => void;
 }
 
-const Navbar: FC<Props> = ({ scroller, getTexts, language, setLanguage }) => {
+const Navbar: FC<Props> = ({ scroller }) => {
+  const {
+    state: { language },
+    dispatch: { getTexts, setLanguage },
+  } = useLanguageContext();
   const text = getTexts("navbar");
 
   const [isActive, setIsActive] = useState(false);

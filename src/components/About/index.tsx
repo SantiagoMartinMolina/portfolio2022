@@ -3,15 +3,14 @@ import { FC, useEffect, useRef, useState } from "react";
 import useOnScreen from "../../hooks/useOnScreen";
 import { StyledAbout } from "./styles";
 import gsap from "gsap";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
-interface Props {
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-  language: string;
-}
+const About: FC = () => {
+  const {
+    state: { language },
+    dispatch: { getTexts },
+  } = useLanguageContext();
 
-const About: FC<Props> = ({ getTexts, language }) => {
   const text = getTexts("about");
 
   const ref = useRef<HTMLDivElement>(null);

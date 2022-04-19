@@ -3,14 +3,12 @@ import emailjs from "@emailjs/browser";
 import SocialMediaLinks from "../SocialMediaLinks";
 import { FC, useState } from "react";
 import { ImSpinner2 } from "react-icons/im";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
-interface Props {
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-}
-
-const ContactForm: FC<Props> = ({ getTexts }) => {
+const ContactForm: FC = () => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("contactForm");
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);

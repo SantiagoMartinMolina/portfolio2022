@@ -2,15 +2,16 @@ import { FC, useCallback, useEffect, useState } from "react";
 import { Scroller } from "../../hooks/useScrollSettings";
 import { StyledBackToTop } from "./styles";
 import { BsArrowUp } from "react-icons/bs";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
 interface Props {
   scroller: Scroller;
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
 }
 
-const BackToTop: FC<Props> = ({ scroller, getTexts }) => {
+const BackToTop: FC<Props> = ({ scroller }) => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("backToTop");
   const [showScroll, setShowScroll] = useState(false);
 

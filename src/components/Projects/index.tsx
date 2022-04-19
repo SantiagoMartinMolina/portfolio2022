@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useOnScreen from "../../hooks/useOnScreen";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
 interface PropsPI {
   title: string;
@@ -13,9 +14,6 @@ interface PropsPI {
   image: string | null;
   video: string | null;
   icons: (string | (() => JSX.Element))[][];
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
 }
 
 const ProjectItem: FC<PropsPI> = ({
@@ -25,8 +23,10 @@ const ProjectItem: FC<PropsPI> = ({
   image,
   video,
   icons,
-  getTexts,
 }) => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("projects");
   const ref = useRef<HTMLDivElement>(null);
   const onScreen = useOnScreen(ref, 0.5);
@@ -98,13 +98,10 @@ const ProjectItem: FC<PropsPI> = ({
   );
 };
 
-interface PropsP {
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-}
-
-const Projects: FC<PropsP> = ({ getTexts }) => {
+const Projects: FC = () => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("projects");
 
   const ref = useRef<HTMLDivElement>(null);
@@ -132,7 +129,7 @@ const Projects: FC<PropsP> = ({ getTexts }) => {
   }, []);
 
   const projects = projectsData.map((project) => (
-    <ProjectItem key={project.title} {...project} getTexts={getTexts} />
+    <ProjectItem key={project.title} {...project} />
   ));
 
   return (

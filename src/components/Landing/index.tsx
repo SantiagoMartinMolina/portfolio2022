@@ -2,14 +2,12 @@ import { FC, useEffect } from "react";
 import { StyledLanding } from "./styles";
 import gsap from "gsap";
 import SocialMediaLinks from "../SocialMediaLinks";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
-interface Props {
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-}
-
-const Landing: FC<Props> = ({ getTexts }) => {
+const Landing: FC = () => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("landing");
 
   useEffect(() => {

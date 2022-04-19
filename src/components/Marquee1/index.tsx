@@ -1,14 +1,12 @@
 import { StyledMarquee1 } from "./styles";
 import { FaReact } from "react-icons/fa";
 import { FC } from "react";
+import useLanguageContext from "../../hooks/useLanguageContext";
 
-interface Props {
-  getTexts: (key: string) => {
-    [key: string]: string;
-  };
-}
-
-const Marquee1: FC<Props> = ({ getTexts }) => {
+const Marquee1: FC = () => {
+  const {
+    dispatch: { getTexts },
+  } = useLanguageContext();
   const text = getTexts("marquee1");
   return (
     <StyledMarquee1 data-scroll-section>
